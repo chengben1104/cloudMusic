@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Image/circleMask.png</file>
+        <file>Image/disk.png</file>
+        <file>Image/icon.ico</file>
+        <file>Image/logo.png</file>
+        <file>Image/magnetNeedle.png</file>
+        <file>Image/musicTable.png</file>
+        <file>Image/musicTable2.png</file>
+        <file>Image/originalLeftButton.png</file>
+        <file>Image/originalPlayButton.png</file>
+        <file>Image/originalRightButton.png</file>
+        <file>Image/playButton.png</file>
+        <file>Image/pressLeftButton.png</file>
+        <file>Image/pressPlayButton.png</file>
+        <file>Image/pressRightButton.png</file>
+        <file>Image/Slider_handle.png</file>
+    </qresource>
+</RCC>

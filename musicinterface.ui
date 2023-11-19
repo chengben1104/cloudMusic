@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MusicInterface</class>
+ <widget class="QMainWindow" name="MusicInterface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1119</width>
+    <height>759</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MusicInterface</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+	background-color:rgb(170, 255, 255)
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">QMainWindow{
+background-color: rgb(255, 244, 224);
+}
+
+QPushButton#pushButton_playOrder
+{
+background-color: rgb(245, 93, 255);
+
+}
+QPushButton
+{
+background-color: rgb(8, 0, 255);
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2" stretch="5,1,0">
+      <item>
+       <widget class="Graphicsview" name="graphicsView">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0,0,0,0">
+        <item>
+         <widget class="QPushButton" name="pushButton_playOrder">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#pushButton_playOrder{
+border-image: url(:/Image/musicTable2.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_lastSong">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#pushButton_lastSong{
+border-image: url(:/Image/originalLeftButton.png);
+}
+#pushButton_lastSong:pressed{
+border-image: url(:/Image/pressLeftButton.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_play">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#pushButton_play{
+border-image: url(:/Image/originalPlayButton.png);
+}
+
+#pushButton_play:pressed{
+border-image: url(:/Image/pressPlayButton.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_nextSong">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#pushButton_nextSong{
+border-image: url(:/Image/originalRightButton.png);
+}
+
+#pushButton_nextSong:pressed{
+border-image: url(:/Image/pressRightButton.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDial" name="dial_volume">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>50</number>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0">
+        <item>
+         <widget class="QLabel" name="label_startTime">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>00:00</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="horizontalSlider_progressBar">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSlider{
+border-color: #bcbcbc;
+}
+
+QSlider::groove:horizontal {                                
+     border: 1px solid #999999;                             
+     height: 3px;                                           
+    margin: 0px 0;                                         
+     left: 5px; right: 5px; 
+ }
+ 
+QSlider::handle:horizontal {                               
+     border: 0px ;                           
+	border-image: url(:/Image/Slider_handle.png);
+                                   
+     margin: -7px -7px -7px -7px;                  
+}
+</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_endTime">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>00:00</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,4">
+      <item>
+       <widget class="QLineEdit" name="lineEdit_search">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">  QLineEdit {
+      border: 5px dashed rgb(10, 182, 255);
+      border-radius: 25px;
+      padding: 0 30px;
+	  background-color: rgb(97, 253, 255);
+	  selection-background-color: rgb(96, 113, 152);
+	  selection-color: rgb(255, 255, 255);
+	  color: rgb(100, 100, 100);
+  }
+
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>搜索音乐</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="styleSheet">
+         <string notr="true">QTabWidget::pane { /* The tab widget frame */
+      border-top: 2px solid rgb(99, 180 ,252);
+  }
+
+  QTabWidget::tab-bar {
+      alignment: center;
+  }
+
+  /* Style the tab using the tab sub-control. Note that
+      it reads QTabBar _not_ QTabWidget */
+  QTabBar::tab {
+	background-color: qlineargradient(spread:pad, x1:0.358, y1:0.341, x2:0.527, y2:0.857955, stop:0 rgba(235, 235, 235, 255), stop:1 rgba(183, 219, 224, 255));
+      border: 2px solid rgb(99, 180 ,252);
+      border-bottom-color: rgb(99, 180 ,252); /* same as the pane color */
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      min-width: 18ex;
+	  min-height: 25px;
+      padding: 2px;
+  }
+
+  QTabBar::tab:selected, QTabBar::tab:hover {
+	background-color: qlineargradient(spread:pad, x1:0.358, y1:0.341, x2:0.527, y2:0.857955, stop:0 rgba(255, 255, 255, 255), stop:1 rgba(208, 249, 255, 255));
+  }
+
+  QTabBar::tab:selected {
+      border-color: rgb(99, 180 ,252);
+      border-bottom-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                  stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                  stop: 0.5 #e7e7e7, stop: 1.0 #fafafa); /* same as pane color */
+  }
+
+  QTabBar::tab:!selected {
+      margin-top: 2px; /* make non-selected tabs look smaller */
+  }
+
+</string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>在线音乐</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTableWidget" name="tableWidget_musicList">
+            <column>
+             <property name="text">
+              <string>id</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>picId</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>歌名</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>歌手</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>专辑</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>本地音乐</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit_lyric">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1119</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>Graphicsview</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">Graphicsview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
